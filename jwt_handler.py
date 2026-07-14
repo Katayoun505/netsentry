@@ -1,3 +1,4 @@
+
 """
 JWT creation and verification.
 
@@ -12,7 +13,12 @@ import os
 from datetime import datetime, timedelta, timezone
 from jose import jwt, JWTError
 
-SECRET_KEY = os.getenv("NETSENTRY_SECRET_KEY", "CHANGE_ME_DEV_ONLY_NOT_FOR_PRODUCTION")
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    raise RuntimeError(
+        "SECRET_KEY environment variable is not set. "
+        "Create a .env file in the project root with SECRET_KEY=<your-generated-secret>."
+    )
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
