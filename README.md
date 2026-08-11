@@ -147,5 +147,13 @@ The dashboard is available at the address shown by `uvicorn` (default: http://12
 This project is for educational purposes. Only run packet capture and the included
 detection engine on networks and systems you own or have explicit permission to
 monitor.
+## Research: Comparative IDS Evaluation
 
- 
+Alongside the NetSentry application, this repo includes a comparative research study evaluating rule-based detection (NetSentry's own logic) against machine learning approaches on the CICIDS2017 dataset.
+
+- **`research/`** — data preprocessing, CNN and Random Forest training, evaluation scripts, and NetSentry baseline comparison, plus feature-importance and generalization analysis (DoS-trained models tested on port-scan traffic).
+- **`paper/`** — IEEE conference paper draft (LaTeX source + compiled PDF) reporting the full comparison: detection accuracy, evasion resistance, and model tradeoffs.
+
+Key finding so far: NetSentry's flow-level DoS rule achieves 0% recall against CICIDS2017 traffic (attacks arrive as many parallel low-rate connections, never crossing the per-source packet threshold), while its port-based rule for known malicious ports remains highly precise. CNN and Random Forest classifiers trained on DoS traffic show strong in-distribution performance but fail to generalize to unseen attack types (e.g. port scans) without retraining.
+
+See `paper/evasion_resistance_ids_comparison.pdf` for full methodology and results.
