@@ -6,3 +6,5 @@ netsentry.db
 *.mmdb
 .env
 .vscode/
+
+research/data/

@@ -1,0 +1,2 @@
+model,accuracy,precision,recall
+NetSentry (rule-based),0.6295315991582235,0.0,0.0

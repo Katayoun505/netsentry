@@ -1,0 +1,6 @@
+Label,rows,median_total_packets,max_total_packets,median_duration_seconds,max_duration_seconds,median_packets_per_10s,max_packets_per_10s,rows_crossing_50,percentage_crossing_50
+BENIGN,87937,4.0,366475,0.031151,119.999998,4.0,30539.59478568138,886,1.007539488497447
+DoS Hulk,46017,12.0,27,84.943031,119.290419,1.6276389864582166,27.0,0,0.0
+DoS GoldenEye,2063,11.0,30,11.569382,119.295746,9.0,21.0,0,0.0
+DoS slowloris,1149,4.0,19,99.999201,119.016191,1.7984476840797579,11.0,0,0.0
+DoS Slowhttptest,1113,7.0,21,63.11792,119.800337,1.1091143356022484,10.0,0,0.0
